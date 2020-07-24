@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta http-equiv="refresh" content="60">
+{% endblock %}
+
+{% block body %}
+<div id = main_content>
+<h2>Daily Leaderboard</h2>
+<form method="POST", action="/leaderboard">
+	<label>Leaderboard</label>
+	<select name="metric" id="selection">
+		<option selected disabled hidden>{{table}}</option>
+		<option value="leaders_by_duration">Duration</option>
+		<option value="leaders_by_distance">Distance</option>
+		<option value="leaders_by_avgspeed">Average Speed</option>
+		<option value="leaders_by_avgpace">Average Pace</option>
+	</select>
+	<label>Date</label>
+	<input type="date" name="date" value="{{req_date}}">
+	<input type="submit" name="Submit">
+</form>
+<br>
+<script>
+    document.getElementById("selection").onchange = function() {
+     localStorage['selection'] = document.getElementById("selection").value;
+    }
+    window.onload= function(){
+        if(localStorage['selection'])
+            document.getElementById("selection").value = localStorage['selection'];
+    }
+</script>
+<table>
+	<th>Rank</th>
+	<th>Rider ID</th>
+	<th>{{table}}</th>
+	<th>Miles</th>
+	{% for result in results %}
+	<tr>
+		<td>#{{loop.index}}</td>
+		{% for i in result%}
+		<td>{{ i }}</td>
+		{%endfor%}	
+	</tr>
+	{% endfor %}
+</table>
+</div>
+{% endblock %}
+
+

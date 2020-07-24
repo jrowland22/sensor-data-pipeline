@@ -1,0 +1,48 @@
+form {
+    text-align: center;
+    font: 10;
+}
+h2 {
+	padding-top: 20px;
+	font-size: 40px;
+	text-align: center;
+}
+#main_content{
+  	max-width:1000px;
+  	margin: auto;
+	background-color: white;
+	border-radius: 5px;
+	font-family: 'Work Sans', sans-serif;
+}
+body{
+	background-color: #312e2b;
+}
+
+table{
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+th{
+	background-color: #e7e6e5;
+}
+
+tr{
+	border-bottom-width: 1px;
+	border-bottom-color: black;
+	border-bottom-style: solid;
+	padding-bottom: 20px;
+}
+
+label{
+	font-size: 20px;
+	width: 50%;
+	margin: auto;
+}
+
+input,select{
+	width: 20%;
+}
+

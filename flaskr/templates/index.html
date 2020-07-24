@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div id="main_content">
+<h2>Daily Leaderboard</h2>
+<form method="POST", action="/">
+	<label>Leaderboard</label>
+	<select name="metric">
+		<option value="leaders_by_duration">Duration</option>
+		<option value="leaders_by_distance">Distance</option>
+		<option value="leaders_by_avgspeed">Average Speed</option>
+		<option value="leaders_by_avgpace">Average Pace</option>
+	</select>
+	<label>Date</label>
+	<input type="date" name="date">
+	<input type="submit" name="Submit">
+</form>
+<br>
+
+</div>
+{% endblock %}
+
