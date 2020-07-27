@@ -38,7 +38,7 @@ Stores processed data from Spark and serves the flask application. In order to h
 table to query. Tables are partitioned by date and have clustering order based on the leaderboard metric they store. For example, 
 the “leaders_by_distance” table uses "distance" as the clustering key to sort data in descending order.
 ### Flask
-Leaderboards are displayed and updated every minute. Users can switch between leaderboards and also see archived leaderboards from previous dates.<br>
+Leaderboards are displayed and updated every 10 seconds. Users can switch between leaderboards and also see archived leaderboards from previous dates.<br>
 <img src = "https://github.com/jrowland22/sensor-data-pipeline/blob/master/images/demo.gif" width = "750" height = "363"/>
 
 ## Running
