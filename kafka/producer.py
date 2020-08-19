@@ -10,7 +10,7 @@ producer = KafkaProducer(
 
 with open(file) as j:
     json_data = json.load(j)
-    for i in range(0,len(json_data)):
+    for i in range(len(json_data)):
         producer.send('sensor',json_data[i])
         time.sleep(1)
 
