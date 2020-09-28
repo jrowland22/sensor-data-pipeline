@@ -47,7 +47,7 @@ def leaderboard():
 
 if __name__ == "__main__":
 	sched = BackgroundScheduler() # scheduler object
-	sched.add_job(leaderboard,'interval',seconds=10) #runs query every 60 seconds to update leaderboard table
+	sched.add_job(leaderboard,'interval',seconds=10) #runs leaderboard function every 10 seconds to update leaderboard table
 	sched.start()
 	app.run(debug=True)
 
